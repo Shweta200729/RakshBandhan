@@ -121,7 +121,7 @@ const GallerySection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen bg-[#0A0205] py-32 px-4 md:px-8 lg:px-16 border-t border-[#C9A84C]/10">
+        <section id="gallery" ref={sectionRef} className="relative w-full min-h-screen bg-[#0A0205] py-32 px-4 md:px-8 lg:px-16 border-t border-[#C9A84C]/10">
 
             {/* Section Header */}
             <div className="text-center mb-20 max-w-3xl mx-auto">

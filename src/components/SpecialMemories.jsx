@@ -152,7 +152,7 @@ const SpecialMemories = () => {
     }, []);
 
     return (
-        <section className="relative w-full min-h-screen bg-[#0A0205] py-24 md:py-32 pt-16 px-4 md:px-8 lg:px-12 z-20 border-t border-[#C9A84C]/15 overflow-hidden">
+        <section id="memories" className="relative w-full min-h-screen bg-[#0A0205] py-24 md:py-32 pt-16 px-4 md:px-8 lg:px-12 z-20 border-t border-[#C9A84C]/15 overflow-hidden">
 
             {/* Center Title */}
             <div className="text-center mb-16 md:mb-20">

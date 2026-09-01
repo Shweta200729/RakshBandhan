@@ -12,7 +12,7 @@ const WriteMessageSection = () => {
     };
 
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#0A0205] flex flex-col items-center justify-center px-4 py-24 overflow-hidden border-t border-[rgba(201,168,76,0.1)]">
+        <section id="wishes" className="relative w-full min-h-[90vh] bg-[#0A0205] flex flex-col items-center justify-center px-4 py-24 overflow-hidden border-t border-[rgba(201,168,76,0.1)]">
 
             {/* Ambient Background */}
             <div className={`absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(109,11,47,0.1)_0%,transparent_70%)] transition-all duration-1000 ${isTied ? 'opacity-100' : 'opacity-30'}`} />

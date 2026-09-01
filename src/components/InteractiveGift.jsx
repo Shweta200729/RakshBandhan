@@ -9,7 +9,7 @@ const InteractiveGift = () => {
     };
 
     return (
-        <section className="relative w-full min-h-[100vh] bg-[#050102] flex flex-col items-center justify-center overflow-hidden border-t border-[#C9A84C]/10">
+        <section id="celebration" className="relative w-full min-h-[100vh] bg-[#050102] flex flex-col items-center justify-center overflow-hidden border-t border-[#C9A84C]/10">
 
             {/* Ambient Background Spotlights */}
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] rounded-full mix-blend-screen pointer-events-none blur-[120px] transition-all duration-1000 ${isOpen ? 'bg-[radial-gradient(circle,rgba(201,168,76,0.35)_0%,transparent_60%)]' : 'bg-[radial-gradient(circle,rgba(109,11,47,0.2)_0%,transparent_60%)]'}`} />
