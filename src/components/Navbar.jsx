@@ -53,23 +53,23 @@ const GoldOrnament = () => (
     </svg>
 );
 
-// ── Animated Hamburger Bars ───────────────────────────────────────────────────
+// ── Animated Hamburger Bars (Icon Only) ───────────────────────────────────────
 const HamburgerBars = ({ isOpen }) => (
-    <div className="w-5 h-4 flex flex-col justify-between items-end shrink-0 pointer-events-none">
+    <div className="w-5 h-3.5 flex flex-col justify-between items-center shrink-0 pointer-events-none">
         <motion.span
-            className="block h-[2px] bg-[#FFD700] rounded-full origin-right"
-            animate={isOpen ? { rotate: -45, y: 1, width: '100%' } : { rotate: 0, y: 0, width: '100%' }}
-            transition={{ duration: 0.35, ease: EXPO }}
+            className="block h-[1.5px] w-5 bg-[#FFD700] rounded-full origin-center"
+            animate={isOpen ? { rotate: 45, y: 5.5 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3, ease: EXPO }}
         />
         <motion.span
-            className="block h-[2px] bg-[#FFD700] rounded-full"
-            animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1, width: '75%' }}
-            transition={{ duration: 0.25 }}
+            className="block h-[1.5px] w-3.5 bg-[#FFD700] rounded-full origin-center"
+            animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.2 }}
         />
         <motion.span
-            className="block h-[2px] bg-[#FFD700] rounded-full origin-right"
-            animate={isOpen ? { rotate: 45, y: -1, width: '100%' } : { rotate: 0, y: 0, width: '100%' }}
-            transition={{ duration: 0.35, ease: EXPO }}
+            className="block h-[1.5px] w-5 bg-[#FFD700] rounded-full origin-center"
+            animate={isOpen ? { rotate: -45, y: -5.5 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3, ease: EXPO }}
         />
     </div>
 );
@@ -218,13 +218,13 @@ const Navbar = () => {
         <>
             <motion.header
                 role="banner"
-                className="fixed top-0 left-0 right-0 z-[9990] px-3 sm:px-6 lg:px-12 py-3 pointer-events-none"
+                className="fixed top-0 left-0 right-0 z-[9990] px-4 sm:px-8 lg:px-12 py-3 sm:py-4 pointer-events-none"
                 initial={{ y: -60, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: EXPO }}
             >
                 <div
-                    className={`max-w-6xl mx-auto flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6 rounded-full pointer-events-auto transition-all duration-500 ${
+                    className={`max-w-6xl mx-auto flex items-center justify-between h-14 sm:h-16 px-5 sm:px-8 rounded-full pointer-events-auto transition-all duration-500 ${
                         scrolled
                             ? 'bg-[#100306]/85 backdrop-blur-xl border border-[#C9A84C]/35 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(201,168,76,0.12)]'
                             : 'bg-[#100306]/50 backdrop-blur-md border border-[#C9A84C]/20 shadow-[0_6px_20px_rgba(0,0,0,0.4)]'
@@ -260,15 +260,12 @@ const Navbar = () => {
                         ))}
                     </nav>
 
-                    {/* ── Mobile Hamburger Menu Button ───────────────────────── */}
+                    {/* ── Mobile Hamburger Menu Button (Icon Only) ─────────────── */}
                     <button
                         onClick={() => setMobileOpen(true)}
-                        className="md:hidden flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#FFD700]/40 bg-[#1A0508]/85 text-[#FFD700] shadow-[0_0_12px_rgba(255,215,0,0.15)] active:scale-95 transition-all cursor-pointer"
+                        className="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-[#FFD700]/50 bg-[#1A0508]/90 text-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.2)] active:scale-90 transition-all cursor-pointer"
                         aria-label="Open mobile navigation menu"
                     >
-                        <span className="font-display text-[10px] tracking-widest uppercase font-bold">
-                            Menu
-                        </span>
                         <HamburgerBars isOpen={mobileOpen} />
                     </button>
                 </div>
